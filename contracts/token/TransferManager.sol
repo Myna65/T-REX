@@ -197,8 +197,7 @@ contract TransferManager is Ownable, ERC20 {
         shareholders[holderIndex] = replacement;
         holderIndices[replacement] = holderIndices[original];
         holderIndices[original] = 0;
-        balances[replacement] = balances[original];
-        balances[original] = 0;
+        _transfer(original, replacement, _balances[original]);
         emit VerifiedAddressSuperseded(original, replacement, msg.sender);
     }
 
