@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 import "./ERC735.sol";
 import "./KeyHolder.sol";
@@ -122,7 +122,7 @@ contract ClaimHolder is KeyHolder, ERC735 {
 
     function getClaim(bytes32 _claimId)
         public
-        constant
+        view
         returns(
             uint256 claimType,
             uint256 scheme,
@@ -153,7 +153,7 @@ contract ClaimHolder is KeyHolder, ERC735 {
 
     function getClaimIdsByType(uint256 _claimType)
         public
-        constant
+        view
         returns(bytes32[] claimIds)
     {
         return claimsByType[_claimType];

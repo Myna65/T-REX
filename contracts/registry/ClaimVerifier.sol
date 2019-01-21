@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 import "../identity/ClaimHolder.sol";
 import "../registry/TrustedIssuersRegistry.sol";
@@ -14,7 +14,7 @@ contract ClaimVerifier{
 
     function claimIsValid(ClaimHolder _identity, uint256 claimType)
     public
-    constant
+    view
     returns (bool claimValid)
     {
         uint256 foundClaimType;
