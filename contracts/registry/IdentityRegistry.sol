@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 import "../identity/ClaimHolder.sol";
 import "../registry/ClaimTypesRegistry.sol";
 import "./ClaimVerifier.sol";
-import "../../zeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 contract IdentityRegistry is Ownable, ClaimVerifier {
     //mapping between a user address and the corresponding identity contract

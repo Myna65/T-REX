@@ -2,10 +2,10 @@ pragma solidity ^0.4.24;
 
 import "../registry/IdentityRegistry.sol";
 import "../compliance/ICompliance.sol";
-import "../../zeppelin-solidity/contracts/ownership/Ownable.sol";
-import "../../zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
-contract TransferManager is Ownable, StandardToken {
+contract TransferManager is Ownable, ERC20 {
 
     mapping(address => uint256) private holderIndices;
     mapping(address => address) private cancellations;
