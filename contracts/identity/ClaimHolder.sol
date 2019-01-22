@@ -159,13 +159,11 @@ contract ClaimHolder is KeyHolder, ERC735 {
         return claimsByType[_claimType];
     }
 
-/**
-    * @notice Function used to get the claimHolder contract owner's address
-    *
-    * @return Returns the claimHolder contract woner'saddress
-    */
-
-    function getOwner() public view returns(address) {
-        return owner;
+    function getClaimIdsByTopic(uint256 _claimType)
+    public
+    constant
+    returns(bytes32[] claimIds)
+    {
+        return claimsByType[_claimType];
     }
 }

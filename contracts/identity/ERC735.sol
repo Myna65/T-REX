@@ -18,6 +18,7 @@ contract ERC735 {
 
     function getClaim(bytes32 _claimId) public constant returns(uint256 claimType, uint256 scheme, address issuer, bytes signature, bytes data, string uri);
     function getClaimIdsByType(uint256 _claimType) public constant returns(bytes32[] claimIds);
+    function getClaimIdsByTopic(uint256 _claimType) public constant returns(bytes32[] claimIds);
     function addClaim(uint256 _claimType, uint256 _scheme, address issuer, bytes _signature, bytes _data, string _uri) public returns (bytes32 claimRequestId);
     function removeClaim(bytes32 _claimId) public returns (bool success);
 }
