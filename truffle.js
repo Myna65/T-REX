@@ -1,10 +1,10 @@
 /*
- * NB: since truffle-hdwallet-provider 0.0.5 you must wrap HDWallet providers in a 
+ * NB: since truffle-hdwallet-provider 0.0.5 you must wrap HDWallet providers in a
  * function when declaring them. Failure to do so will cause commands to hang. ex:
  * ```
  * mainnet: {
- *     provider: function() { 
- *       return new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/<infura-key>') 
+ *     provider: function() {
+ *       return new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/<infura-key>')
  *     },
  *     network_id: '1',
  *     gas: 4500000,
@@ -21,7 +21,7 @@ module.exports = {
       port: 8545,
       network_id: "*", // eslint-disable-line camelcase
       gas: 0xffffffffff,
-      // gasPrice: 0x01
+      gasPrice: 0x01
     },
     "coverage": {
       host: "localhost",
@@ -41,8 +41,8 @@ module.exports = {
       host: "localhost",
       port: 7545,
       network_id: "*",// eslint-disable-line camelcase
-      gas: 0xffffffffff,
-      // gasPrice: 0x01
+      gas: 0x6691B7,
+      gasPrice: 0x12A05F200
     },
     //   "rinkeby": {
     //     network_id: 4,
